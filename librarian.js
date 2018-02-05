@@ -9,22 +9,23 @@ var library = [
 
 /* Task 1 */
 function getBookTitle( index ){
-  //add code
+  return library[index].title;
 }
 
 console.log(getBookTitle(3));
 
 /* Task 3 */
 function addBook( book ){
-  //add code
+  library.push(book);
+  return library;
 }
 
-var newBook = {};
+var newBook = {title: "Origin", year: "2017", author: "Dan Brown", publisher: " Doubleday, Arnoldo Mondadori Editore"};
 console.log(addBook(newBook));
 
 /* Task 4 */
 function bookByAuthor(){
-  //add code
+
 }
 
 console.log(bookByAuthor());
