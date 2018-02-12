@@ -12,9 +12,9 @@ function getBookTitle( index ){
   return library[index].title;
 }
 
-console.log(getBookTitle(3));
+console.log(getBookTitle(4));
 
-/* Task 3 */
+ //Task 3 
 function addBook( book ){
   library.push(book);
   return library;
@@ -22,16 +22,32 @@ function addBook( book ){
 
 var newBook = {title: "Origin", year: "2017", author: "Dan Brown", publisher: " Doubleday, Arnoldo Mondadori Editore"};
 console.log(addBook(newBook));
+//console.log(getBookTitle(5));
 
-/* Task 4 */
-function bookByAuthor(){
+// Task 4 
+function bookByAuthor(a,b){
+  
+  if (a.title < b.title)
+    return -1;
+  if (a.title > b.title)
+    return 1;
+  return 0;
 
 }
+   console.log(library.sort(bookByAuthor));
 
-console.log(bookByAuthor());
 
 /* Task 5 */
-function findByTitle( title ){
+function findByTitle(name){
+  var value,n;
+  var found=[];
+
+  for (var i= 0; i<library.length; i++){
+    value = library[i].title;
+    n = value.toLowerCase().includes(name);
+    if (n) found.push(library[i]);
+  }
+  return found;
   //add code
 }
 
