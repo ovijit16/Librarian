@@ -14,6 +14,16 @@ function getBookTitle( index ){
 
 console.log(getBookTitle(4));
 
+/* Task 2 */
+
+function modifyLibrary( index ){
+  library[index] = {title: "Modified Library", year: "new year", author: "new author", publisher: "new publisher"};
+  return library;
+  
+}
+
+console.log(modifyLibrary(1));
+
  //Task 3 
 function addBook( book ){
   library.push(book);
